@@ -64,7 +64,7 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>1.0.0</version>
 				<configuration>
-					<imageName>192.168.184.141:5000/${project.artifactId}</imageName>
+					<imageName>118.25.210.222:5000/${project.artifactId}</imageName>
 					<baseImage>java</baseImage>
 					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
 					<!-- copy the service's jar file from target into the root directory of the image -->
@@ -76,11 +76,11 @@
 						</resource>
 					</resources>
 					<dockerHost>http://118.25.210.222:2375</dockerHost>
-					<forceTags>true</forceTags>
-					<imageTags>
-						<imageTag>${project.version}</imageTag>
-						<imageTag>latest</imageTag>
-					</imageTags>
+<!--					<forceTags>true</forceTags>-->
+<!--					<imageTags>-->
+<!--						<imageTag>${project.version}</imageTag>-->
+<!--						<imageTag>latest</imageTag>-->
+<!--					</imageTags>-->
 				</configuration>
 			</plugin>
 		</plugins>
